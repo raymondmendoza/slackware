@@ -1,3 +1,48 @@
+Fri Aug 16 15:21:11 CEST 2013
+Introducing Slackware-style package categories for clarity's sake. 
+ap/
+|-- faac
+|-- faad2
+|-- ffmpeg
+|-- hplip
+|-- lame
+|-- musepack-tools
+|-- p7zip
+|-- pwgen
+|-- recode
+|-- sbopkg
+|-- speex
+|-- twolame
+|-- unrar
+`-- user-settings-console
+d/
+|-- perl-BerkeleyDB
+|-- perl-digest-hmac
+|-- perl-digest-sha1
+|-- perl-IO-Multiplex
+|-- perl-net-dns
+|-- perl-net-ip
+`-- perl-Net-Server
+l/
+|-- libcuefile
+|-- libmms
+|-- libmp4v2
+|-- libmpdclient
+|-- libreplaygain
+|-- libshout
+|-- libsigc++
+`-- libtorrent
+n/
+|-- dovecot
+|-- icecast
+|-- mpd
+|-- ncmpc
+|-- postfix
+|-- postgrey
+|-- rtorrent
+|-- squid
+`-- squidGuard
++---------------------------+
 Fri Jul 12 11:29:46 CEST 2013
 postgrey-1.34-i486-2_microlinux.txz: Rebuilt.
   Edited /etc/rc.d/rc.postgrey.
