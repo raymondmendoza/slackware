@@ -331,8 +331,9 @@ Sur Slackware 32-bits :
 --8<---------- /etc/slackpkg/slackpkgplus.conf -------------------------------
 # /etc/slackpkg/slackpkgplus.conf
 SLACKPKGPLUS=on
+VERBOSE=2
 PKGS_PRIORITY=( microlinux:.* )
-REPOPLUS=( slackpkgplus microlinux )
+REPOPLUS=( microlinux slackpkgplus )
 MIRRORPLUS['microlinux']=http://www.microlinux.fr/slackware/MLED-14.0-32bit/
 MIRRORPLUS['slackpkgplus']=http://slakfinder.org/slackpkg+/
 --8<--------------------------------------------------------------------------
@@ -343,7 +344,7 @@ Sur Slackware64:
 # /etc/slackpkg/slackpkgplus.conf
 SLACKPKGPLUS=on
 PKGS_PRIORITY=( microlinux:.* )
-REPOPLUS=( slackpkgplus microlinux )
+REPOPLUS=( microlinux slackpkgplus )
 MIRRORPLUS['microlinux']=http://www.microlinux.fr/slackware/MLED-14.0-64bit/
 MIRRORPLUS['slackpkgplus']=http://slakfinder.org/slackpkg+/
 --8<--------------------------------------------------------------------------

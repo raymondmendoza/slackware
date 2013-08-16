@@ -1,3 +1,11 @@
+Sun Sep  1 11:06:28 CEST 2013
+gtkcdlabel-1.15-noarch-1_microlinux.txz: Added.
+poedit-1.4.6.1-x86_64-1_microlinux.txz: Added.
+mplayerthumbs-4.10.5-x86_64-1_microlinux.txz: Added.
+svgpart-4.10.5-x86_64-1_microlinux.txz: Added.
+gnote-0.7.6-x86_64-1_microlinux.txz: Added.
+ffmpegthumbs-4.10.5-x86_64-1_microlinux.txz: Added.
++--------------------------+
 Mon Aug 26 17:42:39 CEST 2013
   Added a section in the README.txt file on using the network manager applet.
 BeautifulSoup-3.2.0-x86_64-1_microlinux.txz: Added.

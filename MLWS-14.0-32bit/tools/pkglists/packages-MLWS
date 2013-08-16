@@ -20,14 +20,18 @@ eurostile-fonts
 faac
 faad2
 ffmpeg
+ffmpegthumbs
 flash-player-plugin
+fontconfig-infinality
 frei0r
 gc
 glibmm
+gnote
 goocanvas
 google-droid-fonts
 gsl
 gsm
+gtkcdlabel
 gtkmm
 gwenview
 hplip
@@ -91,6 +95,7 @@ mozilla-firefox-l10n
 mozilla-thunderbird-l10n
 MPlayer
 mplayer-codecs
+mplayerthumbs
 musepack-tools
 nepomuk-core
 numpy
@@ -108,6 +113,7 @@ oxygen-icons
 p7zip
 pangomm
 phonon-gstreamer
+poedit
 print-manager
 pygoocanvas
 pykde4
@@ -127,6 +133,7 @@ smplayer
 soprano
 soundtouch
 speex
+svgpart
 tolua++
 transcode
 transmission

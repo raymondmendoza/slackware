@@ -1,24 +1,15 @@
 Microlinux Enterprise Workstation
 ---------------------------------
 
-  * kdenetwork
   * kdf
   * kpat
   * kruler
   * kscd
   * libkcompactdisc
-  * mplayerthumbs
   * svgpart
   * sweeper
-  * Gnote
-  * poedit
-  * Geany
-  * Inkscape
-  * Gtkcdlabel
-  * Amule
   * Gtkpod
   * audiocd-kio
   * bluedevil
   * digikam
-  * ffmpegthumbs
   * filelight

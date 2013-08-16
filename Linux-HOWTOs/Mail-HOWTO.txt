@@ -573,7 +573,7 @@ Générer le certificat
 Éditer '/usr/doc/dovecot-2.x.y/dovecot-openssl.cnf' en fournissant des
 données qui vous correspondent, comme ceci :
 
---8<---------- /usr/share/dovecot-2.x.y/dovecot-openssl.cnf ------------------
+--8<---------- /usr/doc/dovecot-2.x.y/dovecot-openssl.cnf --------------------
 [ req ]
 default_bits = 1024
 encrypt_key = yes

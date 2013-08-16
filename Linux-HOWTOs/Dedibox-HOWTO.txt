@@ -33,7 +33,8 @@ Une fois que le système est installé, passer en 'Mode secours' et choisir
 La console affiche un identifiant et un mot de passe qui permettent de se
 connecter en SSH au système de secours.
 
-Attendre une ou deux minutes, puis lancer la connexion :
+Attendre une ou deux minutes, puis lancer la connexion. Parfois, il faut s'y
+prendre à plusieurs reprises, pour une raison mystérieuse :
 
   $ ssh kikinovak@88.191.137.75
   kikinovak@88.191.137.75's password: 
@@ -295,26 +296,23 @@ et croiser les doigts.
 Premier redémarrage
 -------------------
 
+Récupérer et installer le paquet 'user-settings-console' :
+
+  # links http://www.microlinux.fr/slackware
+
+Redémarrer :
+
+  # reboot && exit
+
 Récupérer ma doc, mes scripts et mes fichiers de configuration :
 
   # cd 
-  # git clone https://github.com/kikinovak/server
-
-Construire et installer le paquet 'user-settings-console'.
-
-  # source ~/.bashrc
-
-En passant, vérifier les variables d'environnement dans
-'/etc/profile.d/lang.sh'.
+  # git clone https://github.com/kikinovak/slackware
 
 Construire un initrd :
 
   * Generic-Kernel-HOWTO.txt
   * LILO-HOWTO.txt
-
-Croiser les doigts et redémarrer :
-
-  # reboot && exit
 
 
 Sécurité
