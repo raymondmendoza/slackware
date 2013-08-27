@@ -26,6 +26,7 @@ sous Slackware Linux.
   * Ajouter l'authentification SMTP à Postfix
   * Utiliser le port 587 pour l'envoi
   * Filtre anti-spam avec Postgrey
+  * Webmail avec SquirrelMail
   * Supprimer Dovecot
   * Supprimer Postfix
 
