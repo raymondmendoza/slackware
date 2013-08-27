@@ -20,6 +20,7 @@ une machine tournant sous Slackware.
   * Le protocole HTTPS
   * Générer un certificat auto-signé
   * Configurer Apache et SSL
+  * Plusieurs hébergements SSL sur un même serveur
 
 
 Introduction
@@ -708,6 +709,65 @@ Redémarrer Apache :
 Ouvrir notre site sécurisé :
 
   # links https://secure.bernadette
+
+
+Plusieurs hébergements SSL sur un même serveur
+----------------------------------------------
+
+Générer un certificat à part et le ranger dans '/etc/httpd'. Exemple :
+
+  # ls -l /etc/httpd/*.{key,crt}
+  -rw-r--r-- 1 root   root   952 août  23 12:48 /etc/httpd/scholae.crt
+  -r-------- 1 apache apache 887 août  23 12:48 /etc/httpd/scholae.key
+  -rw-r--r-- 1 root   root   952 août  27 16:02 /etc/httpd/scholae-webmail.crt
+  -r-------- 1 apache apache 887 août  27 16:02 /etc/httpd/scholae-webmail.key
+
+Ajouter une directive dans '/etc/httpd/extra/httpd-ssl.conf et créer un
+deuxième hôte virtuel en se basant sur le premier comme modèle. Penser à
+renseigner l'emplacement du nouveau certificat :
+
+--8<---------- /etc/httpd/extra/httpd-ssl.conf -------------------------------
+...
+Listen 443
+
+SSLStrictSNIVHostCheck off
+...
+<VirtualHost adresse_ip:443>
+DocumentRoot "/srv/httpd/vhosts/scholae-secure/htdocs"
+ServerName www.scholae.fr:443
+...
+SSLCertificateFile "/etc/httpd/scholae.crt"
+SSLCertificateKeyFile "/etc/httpd/scholae.crt"
+...
+</VirtualHost>
+
+<VirtualHost adresse_ip:443>
+DocumentRoot "/srv/httpd/vhosts/scholae-webmail/htdocs"
+ServerName mail.scholae.fr:443
+...
+SSLCertificateFile "/etc/httpd/scholae-webmail.crt"
+SSLCertificateKeyFile "/etc/httpd/scholae-webmail.crt"
+...
+</VirtualHost>
+--8<--------------------------------------------------------------------------
+
+Pour être sûr que personne ne se connecte en utilisant le port 80, on peut
+rediriger ces requêtes ailleurs. Exemple :
+
+--8<---------- /etc/httpd/extra/httpd-vhosts.conf ----------------------------
+...
+# mail.scholae.fr
+<VirtualHost *:80>
+    ServerAdmin info@microlinux.fr
+    DocumentRoot "/srv/httpd/vhosts/default/htdocs"
+    ServerName mail.scholae.fr
+    ErrorLog "/var/log/httpd/default-error_log"
+    CustomLog "/var/log/httpd/default-access_log" common
+</VirtualHost>
+...
+--8<--------------------------------------------------------------------------
+
+Il ne reste qu'à redémarrer Apache.
 
 
 ------------------------------------------------------------------------------
