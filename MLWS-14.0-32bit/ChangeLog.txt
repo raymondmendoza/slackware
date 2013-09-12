@@ -1,4 +1,4 @@
-
+Thu Sep 12 13:22:51 CEST 2013
 freetype-2.4.12-i486-1_microlinux.txz: Upgraded.
 fontconfig-infinality-20130104_1-noarch-1_microlinux.txz: Added.
 qt-4.8.4-i486-2_microlinux.txz: Rebuilt.
