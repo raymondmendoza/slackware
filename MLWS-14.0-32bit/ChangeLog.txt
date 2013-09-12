@@ -1,3 +1,11 @@
+Thu Sep 12 13:22:51 CEST 2013
+freetype-2.4.12-i486-1_microlinux.txz: Upgraded.
+fontconfig-infinality-20130104_1-noarch-1_microlinux.txz: Added.
+qt-4.8.4-i486-2_microlinux.txz: Rebuilt.
+	Included the Infinality patchset for improved font rendering. Thanks to
+	Dimitris Tsagkatakis. Check out his blog at http://someslack.wordpress.com
+	for a little HOWTO on Infinality.
++--------------------------+
 Sun Sep  1 11:06:28 CEST 2013
 gtkcdlabel-1.15-noarch-1_microlinux.txz: Added.
 poedit-1.4.6.1-i486-1_microlinux.txz: Added.

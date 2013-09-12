@@ -1,3 +1,11 @@
+Thu Sep 12 08:10:00 CEST 2013
+freetype-2.4.12-i486-1_microlinux.txz: Upgraded.
+fontconfig-infinality-20130104_1-noarch-1_microlinux.txz: Added.
+qt-4.8.4-i486-1_microlinux.txz: Upgraded.
+	Included the Infinality patchset for improved font rendering. Thanks to
+	Dimitris Tsagkatakis. Check out his blog at http://someslack.wordpress.com
+	for a little HOWTO on Infinality.
++--------------------------+
 Thu Aug  8 07:35:22 CEST 2013
 mozilla-firefox-l10n-17.0.8-i486-1_microlinux.txz: Upgraded.
 mozilla-thunderbird-l10n-17.0.8-i486-1_microlinux.txz: Upgraded.
