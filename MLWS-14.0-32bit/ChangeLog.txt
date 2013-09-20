@@ -1,3 +1,7 @@
+Fri Sep 20 10:15:02 CEST 2013
+mozilla-firefox-l10n-17.0.9-i486-1_microlinux.txz: Upgraded.
+mozilla-thunderbird-l10n-17.0.9-i486-1_microlinux.txz: Upgraded.
++--------------------------+
 Sun Sep  1 11:06:28 CEST 2013
 gtkcdlabel-1.15-noarch-1_microlinux.txz: Added.
 poedit-1.4.6.1-i486-1_microlinux.txz: Added.
