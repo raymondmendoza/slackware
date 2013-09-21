@@ -1,0 +1,148 @@
+=============
+Upgrade HOWTO (c) Nicolas Kovacs <info@microlinux.fr>
+=============
+
+Dernière révision : 21 septembre 2013
+
+Ce HOWTO décrit la mise à jour de Slackware Linux vers la prochaine version
+majeure.
+
+
+13.37 ==> 14.0
+--------------
+
+Passer en init 3.
+
+Arrêter les services inutiles :
+
+  # cd /etc/rc.d
+  # ./rc.fuse stop
+  # ./rc.hald stop
+  # ./rc.inetd stop
+    ...
+
+Supprimer tous les paquets tiers du système :
+
+  # slackpkg clean-system
+
+Désinstaller d'éventuels drivers vidéo propriétaires.
+
+Réduire le système :
+
+  # slackpkg remove e f kde kdei t tcl x xap y
+
+Éditer '/etc/slackpkg/mirrors' en indiquant la nouvelle version :
+
+32-bits, OVH :
+
+--8<---------- /etc/slackpkg/mirrors -----------------------------------------
+http://mirror.ovh.net/mirrors/ftp.slackware.com/slackware-14.0/
+--8<--------------------------------------------------------------------------
+
+64-bits, OVH :
+
+--8<---------- /etc/slackpkg/mirrors -----------------------------------------
+http://mirror.ovh.net/mirrors/ftp.slackware.com/slackware64-14.0/
+--8<--------------------------------------------------------------------------
+
+32-bits, miroir local :
+
+--8<---------- /etc/slackpkg/mirrors -----------------------------------------
+http://mirror.nestor/slackware/slackware-14.0/
+--8<--------------------------------------------------------------------------
+
+64-bits, miroir local :
+
+--8<---------- /etc/slackpkg/mirrors -----------------------------------------
+http://mirror.nestor/slackware/slackware64-14.0/
+--8<--------------------------------------------------------------------------
+
+Garder le kernel en cours en décommentant les lignes correspondantes :
+
+--8<---------- /etc/slackpkg/blacklist ---------------------------------------
+...
+kernel-firmware
+kernel-generic
+kernel-generic-smp
+kernel-headers
+kernel-huge
+kernel-huge-smp
+kernel-modules
+kernel-modules-smp
+kernel-source
+...
+--8<--------------------------------------------------------------------------
+
+  # slackpkg update
+
+Mettre à jour le paquet 'slackpkg' lui-même :
+
+  # slackpkg upgrade slackpkg
+
+  ==> (O)verwrite all old files with the new ones. The
+         old files will be stored with the suffix .orig.
+
+Revoir la configuration de '/etc/slackpkg/{blacklist,mirrors}'.
+
+  # slackpkg update
+
+Mettre à jour le paquet 'glibc-solibs' :
+
+  # slackpkg upgrade glibc-solibs
+
+Installer tous les paquets marqués 'Added.' dans le fichier 'ChangeLog.txt' :
+
+  # slackpkg install-new
+
+Faire un peu de ménage et supprimer les paquets qui ne sont pas strictement
+nécessaires pour l'instant :
+
+  # slackpkg remove kde kdei x xap
+
+Mettre à jour les paquets existants :
+
+  # slackpkg upgrade-all
+
+  ==> (O)verwrite all old files with the new ones. The
+         old files will be stored with the suffix .orig.
+
+  # find /etc -name '*.orig' -exec rm -f \{} \;
+
+Supprimer les paquets obsolètes :
+
+  # slackpkg clean-system
+
+Commenter les lignes concernant le kernel dans '/etc/slackpkg/blacklist' et
+mettre à jour le kernel :
+
+--8<---------- /etc/slackpkg/blacklist ---------------------------------------
+...
+#kernel-firmware
+#kernel-generic
+#kernel-generic-smp
+#kernel-headers
+#kernel-huge
+#kernel-huge-smp
+#kernel-modules
+#kernel-modules-smp
+#kernel-source
+...
+--8<--------------------------------------------------------------------------
+
+  # slackpkg upgrade-all
+
+Construire un Initrd pour le nouveau kernel et configurer LILO en conséquence.
+
+  /!\ Il faudra éditer manuellement la version du kernel dans
+  '/etc/mkinitrd.conf'.
+
+Redémarrer sur le nouveau kernel.
+
+Installer les groupes de paquets manquants :
+
+  # slackpkg install e f t tcl x y
+
+
+------------------------------------------------------------------------------
+# vim: syntax=txt
+# vim: set encoding=latin1
