@@ -61,6 +61,8 @@ minimum :
   # chmod -x rc.fuse rc.hald rc.inetd
     ...
 
+Sur un système 64-bits, supprimer d'éventuels paquets multilib.
+
 Supprimer tous les paquets tiers du système :
 
   # slackpkg clean-system
@@ -174,6 +176,7 @@ Redémarrer et faire un peu de ménage :
   # rm -f *.conf
   # cd /etc/rc.d
   # rm -f rc.hald rc.modules-2.6.37.6* rc.modules
+  # chmod -x rc.yp
   # find /etc -name '*.orig' -exec rm -f \{} \;
 
 
