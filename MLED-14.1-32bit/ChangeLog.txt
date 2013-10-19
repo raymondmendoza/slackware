@@ -1,4 +1,4 @@
-
 Fri Oct 18 22:56:33 CEST 2013
+	Getting started on what will be MLED 14.1 32-bit.
 ap/user-settings-console-1.0-noarch-2_microlinux.txz: Added.
 +---------------------------+
