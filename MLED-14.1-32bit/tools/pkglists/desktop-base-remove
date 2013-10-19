@@ -203,11 +203,9 @@ xf86-video-nouveau
 xf86-video-nv
 
 # XAP
-MPlayer
-audacious
-audacious-plugins
 blackbox
 blueman
+ddd
 electricsheep
 fvwm
 gkrellm
@@ -235,5 +233,3 @@ xpaint
 xpdf
 xsane
 xv
-xxgdb
-
