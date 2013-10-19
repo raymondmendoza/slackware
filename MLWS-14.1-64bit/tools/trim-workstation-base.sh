@@ -1,0 +1,1 @@
+../../MLWS-14.1-32bit/tools/trim-workstation-base.sh
