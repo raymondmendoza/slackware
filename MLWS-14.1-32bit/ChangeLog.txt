@@ -1,3 +1,14 @@
+Sun Oct 20 08:18:42 CEST 2013
+kde/kde-base-artwork-4.10.5-i486-2_microlinux.txz: Rebuilt.
+kde/kde-baseapps-4.10.5-i486-2_microlinux.txz: Rebuilt.
+kde/kde-workspace-4.10.5-i486-3_microlinux.txz: Rebuilt.
+kde/user-settings-kde-4.10.5-noarch-1_microlinux.txz: Added.
+	KDE packages rebuilt for a more "corporate" default configuration.
+d/jdk-7u45-i586-1_microlinux.txz: Added.
+xap/openoffice-4.0.1_en_US-i586-1_microlinux.txz: Added.
+xap/openoffice-langpack-fr-4.0.1-i486-1_microlinux.txz: Added.
+xap/openoffice-langpack-de-4.0.1-i486-1_microlinux.txz: Added.
++---------------------------+
 Fri Oct 18 22:56:33 CEST 2013
 	Getting started on what will be MLWS 14.1 32-bit.
 ap/user-settings-console-1.0-noarch-2_microlinux.txz: Added.
