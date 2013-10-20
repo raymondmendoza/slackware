@@ -4,8 +4,8 @@ kde/kde-baseapps-4.10.5-i486-2_microlinux.txz: Rebuilt.
 kde/kde-base-artwork-4.10.5-i486-2_microlinux.txz: Rebuilt.
 kde/kde-workspace-4.10.5-i486-3_microlinux.txz: Rebuilt.
 kde/kde-wallpapers-4.10.5-i486-2_microlinux.txz: Rebuilt.
-kde/user-settings-kde-4.10.5-noarch-1_microlinux.txz: Added.
 	Rebuilt for a more sober and "corporate" default configuration.
+kde/user-settings-kde-4.10.5-noarch-1_microlinux.txz: Added.
 d/jdk-7u45-i586-1_microlinux.txz: Added.
 xap/openoffice-4.0.1_en_US-i586-1_microlinux.txz: Added.
 xap/openoffice-langpack-fr-4.0.1-i486-1_microlinux.txz: Added.
