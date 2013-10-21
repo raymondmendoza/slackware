@@ -168,12 +168,13 @@ mozilla-firefox-l10n
 mozilla-thunderbird-l10n
 MPlayer
 openoffice
-openoffice-langpack
+openoffice-langpack-de
+openoffice-langpack-fr
 openshot
 poedit
 smplayer
 transmission
-virtualbox
-virtualbox-kernel
+#virtualbox
+#virtualbox-kernel
 
 

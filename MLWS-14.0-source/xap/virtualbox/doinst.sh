@@ -41,9 +41,5 @@ config etc/vbox/vbox.cfg.new
 config etc/default/virtualbox.new
 preserve_perms etc/rc.d/rc.vboxdrv.new
 preserve_perms etc/rc.d/rc.vboxballoonctrl-service.new
+preserve_perms etc/rc.d/rc.vboxautostart-service.new
 
-# Create 'vboxusers' group if it doesn't exist on the system.
-if ! grep -q "^vboxusers:" /etc/group ; then
-  groupadd -g 215 vboxusers
-	echo "Added vboxusers group."
-fi

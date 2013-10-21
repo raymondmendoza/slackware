@@ -1,3 +1,12 @@
+Mon Oct 21 17:07:18 CEST 2013
+xap/openoffice-4.0.1_en_US-i586-1_microlinux.txz: Upgraded.
+xap/openoffice-langpack-de-4.0.1-i486-1_microlinux.txz: Upgraded.
+xap/openoffice-langpack-fr-4.0.1-i486-1_microlinux.txz: Upgraded.
+	The language packages use a different naming scheme now to prevent conflicts
+	if a user decides to install different languages on the same machine.
+xap/virtualbox-4.2.18-i486-1_microlinux.txz: Upgraded.
+xap/virtualbox-kernel-4.2.18_3.2.45_smp-i486-1_microlinux.txz: Upgraded.
++--------------------------+
 Wed Oct  9 09:46:59 CEST 2013
 xap/openoffice-langpack-4.0.0_de-i486-2_microlinux.txz: Added.
 +--------------------------+
