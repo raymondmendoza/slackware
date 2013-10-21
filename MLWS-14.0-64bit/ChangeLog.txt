@@ -1,3 +1,12 @@
+Mon Oct 21 17:07:18 CEST 2013
+slackware64/xap/openoffice-4.0.1_en_US-x86_64-1_microlinux.txz
+slackware64/xap/openoffice-langpack-de-4.0.1-x86_64-1_microlinux.txz
+slackware64/xap/openoffice-langpack-fr-4.0.1-x86_64-1_microlinux.txz
+	The language packages use a different naming scheme now to prevent conflicts
+	if a user decides to install different languages on the same machine.
+slackware64/xap/virtualbox-4.2.18-x86_64-1_microlinux.txz
+slackware64/xap/virtualbox-kernel-4.2.18_3.2.45-x86_64-1_microlinux.txz
++--------------------------+
 Wed Oct  9 09:46:59 CEST 2013
 xap/openoffice-langpack-4.0.0_de-x86_64-2_microlinux.txz: Added.
 +--------------------------+
