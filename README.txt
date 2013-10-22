@@ -13,14 +13,17 @@ step-by-step documentation.
 
 Binary packages are provided for 32-bit and 64-bit architectures.
 
-The software is suitable for desktops (MLED) and servers (MLES). You'll
-probably be more interested in the desktop stuff.
+The software is suitable for servers, desktops and workstations :
+
+  * MLES = Microlinux Enterprise Server
+  * MLWS = Microlinux Enterprise Workstation - based on KDE
+  * MLED = Microlinux Enterprise Desktop     - based on Xfce
 
 My personal collection of Linux-HOWTOs is included. It's in french, but the
 *nix bits are more or less universal. ;o)
 
-Check out the README and ChangeLog.txt files in the respective subdirectories
-for more information.
+Check out the README.txt and ChangeLog.txt files in the respective
+subdirectories for more information.
 
 Credits
 -------
@@ -28,6 +31,7 @@ Credits
 Much of this work is really just an assembly of the great work that's been done
 before by some excellent folks, and here's the place to give them credit:
 
+  * Matteo Rossini, who has made my life so much easier with slackpkg+
   * Robby Workman for his excellent work on Xfce
   * Eric Hameleers for his "impossible" SlackBuild scripts ;o)
   * Daniel de Kok, who worked on the initial scripts back in 2006
@@ -47,7 +51,7 @@ The "official" file tree, where you'll find binaries and complete sources:
 
   * http://www.microlinux.fr/slackware
 
-Eric Hameleers' mirror for this repository:
+Eric Hameleers' partial mirror for this repository:
 
   * http://taper.alienbase.nl/mirrors/people/kikinovak
 
