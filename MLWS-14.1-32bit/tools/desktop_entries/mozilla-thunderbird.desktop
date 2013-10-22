@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=thunderbird
+Icon=/usr/share/pixmaps/thunderbird.png
+Type=Application
+Categories=Application;Network;
+GenericName=Electronic Mail
+GenericName[de]=Elektronische Post
+GenericName[fr]=Courrier électronique
+Name=Mozilla Thunderbird ESR
+StartupNotify=true

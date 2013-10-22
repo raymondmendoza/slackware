@@ -7,7 +7,8 @@ CWD=$(pwd)
 ENTRIESDIR=$CWD/desktop_entries
 ENTRIES=`ls $ENTRIESDIR` 
 MENUDIRS="  /usr/share/applications \
-            /usr/share/applications/kde4"
+            /usr/share/applications/kde4 \
+            /usr/share/distcc"
 
 for MENUDIR in $MENUDIRS; do
 	for ENTRY in $ENTRIES; do
