@@ -1,3 +1,10 @@
+Tue Oct 22 16:45:55 CEST 2013
+x/eurostile-fonts-1.0-noarch-1_microlinux.txz: Added.
+x/google-droid-fonts-20100409-noarch-1_microlinux.txz: Added.
+x/webcore-fonts-3.0-noarch-3_microlinux.txz: Added.
+xap/mozilla-firefox-l10n-24.0-x86_64-1_microlinux.txz: Added.
+xap/mozilla-thunderbird-l10n-24.0-x86_64-1_microlinux.txz: Added.
++---------------------------+
 Sun Oct 20 08:18:42 CEST 2013
 kde/kde-baseapps-4.10.5-x86_64-2_microlinux.txz: Rebuilt.
 	Rebuilt without Konqueror, since we're using Firefox.
