@@ -271,6 +271,8 @@ Here's what our complete configuration file looks like now:
 --8<---------- /etc/slackpkg/slackpkgplus.conf -------------------------------
 # /etc/slackpkg/slackpkgplus.conf
 SLACKPKGPLUS=on
+VERBOSE=1
+USEBL=1
 PKGS_PRIORITY=( microlinux:.* multilib:.* )
 REPOPLUS=( microlinux slackpkgplus )
 MIRRORPLUS['microlinux']=http://mirror.nestor/microlinux/MLWS-14.0-64bit/
