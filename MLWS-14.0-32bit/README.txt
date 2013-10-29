@@ -148,6 +148,8 @@ On 32-bit Slackware:
 --8<---------- /etc/slackpkg/slackpkgplus.conf -------------------------------
 # /etc/slackpkg/slackpkgplus.conf
 SLACKPKGPLUS=on
+VERBOSE=1
+USEBL=1
 PKGS_PRIORITY=( microlinux:.* )
 REPOPLUS=( slackpkgplus microlinux )
 MIRRORPLUS['microlinux']=http://www.microlinux.fr/slackware/MLWS-14.0-32bit/
@@ -159,6 +161,8 @@ On Slackware64:
 --8<---------- /etc/slackpkg/slackpkgplus.conf -------------------------------
 # /etc/slackpkg/slackpkgplus.conf
 SLACKPKGPLUS=on
+VERBOSE=1
+USEBL=1
 PKGS_PRIORITY=( microlinux:.* )
 REPOPLUS=( slackpkgplus microlinux )
 MIRRORPLUS['microlinux']=http://www.microlinux.fr/slackware/MLWS-14.0-64bit/
