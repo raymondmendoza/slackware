@@ -40,6 +40,7 @@ scons
 # Package group KDE #
 #####################
 ark
+audiocd-kio
 ffmpegthumbs
 gwenview
 k3b
@@ -63,8 +64,10 @@ kde-workspace
 kmix
 konsole
 ksaneplugin
+kscd
 ksnapshot
 libkcddb
+libkcompactdisc
 libkdcraw
 libkexiv2
 libkipi
@@ -107,6 +110,7 @@ goocanvas
 gsl
 gsm
 gtkmm
+id3lib
 imlib2
 libass
 libbluray
@@ -162,6 +166,8 @@ audacious
 audacious-plugins
 audacity
 conky
+easytag
+filezilla
 gnote
 gtkcdlabel
 inkscape
