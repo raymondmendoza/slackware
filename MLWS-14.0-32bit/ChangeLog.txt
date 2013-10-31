@@ -1,3 +1,12 @@
+Thu Oct 31 11:03:37 CET 2013
+l/libmusicbrainz3-3.0.3-i486-1_microlinux.txz: Added.
+kde/kscd-4.10.5-i486-1_microlinux.txz: Added.
+kde/libkcompactdisc-4.10.5-i486-1_microlinux.txz: Added.
+kde/audiocd-kio-4.10.5-i486-1_microlinux.txz: Added.
+xap/filezilla-3.7.3-i486-1_microlinux.txz: Added.
+l/id3lib-3.8.3-i486-2_microlinux.txz: Added.
+xap/easytag-2.1.6-i486-3_microlinux.txz: Added.
++--------------------------+
 Tue Oct 29 16:57:39 CET 2013
 kde/networkmanagement-0.9.0.8-i486-1_microlinux.txz: Added.
 +--------------------------+
