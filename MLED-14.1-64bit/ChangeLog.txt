@@ -1,4 +1,4 @@
-
+Mon Nov  4 10:53:46 CET 2013
 xfce/slack-wallpapers-0.116-noarch-1_microlinux.txz: Added.
 xfce/microlinux-wallpapers-1.0-noarch-1_microlinux.txz: Added.
 xap/mozilla-firefox-l10n-24.1.0-x86_64-1_microlinux.txz: Added.
@@ -7,6 +7,17 @@ d/jdk-7u45-x86_64-1_microlinux.txz: Added.
 xap/openoffice-4.0.1_en_US-x86_64-1_microlinux.txz: Added.
 xap/openoffice-langpack-de-4.0.1-x86_64-1_microlinux.txz: Added.
 xap/openoffice-langpack-fr-4.0.1-x86_64-1_microlinux.txz: Added.
+ap/dirac-1.0.2-x86_64-1_microlinux.txz: Added.
+l/live555-2011.12.23-x86_64-1_microlinux.txz: Added.
+l/libdv-1.0.0-x86_64-1_microlinux.txz: Added.
+ap/faad2-2.7-x86_64-1_microlinux.txz: Added.
+l/libcuefile-r475-x86_64-1_microlinux.txz: Added.
+l/libreplaygain-r475-x86_64-1_microlinux.txz: Added.
+ap/musepack-tools-r435-x86_64-1_microlinux.txz: Added.
+l/libdca-0.0.5-x86_64-1_microlinux.txz: Added.
+l/a52dec-0.7.4-x86_64-1_microlinux.txz: Added.
+ap/twolame-0.3.13-x86_64-1_microlinux.txz: Added.
+xap/MPlayer-1.1.1-x86_64-1_microlinux.txz: Rebuilt.
 +---------------------------+
 Sat Nov  2 14:38:27 CET 2013
 ap/cdlabelgen-4.3.0-noarch-1_microlinux.txz: Added.
