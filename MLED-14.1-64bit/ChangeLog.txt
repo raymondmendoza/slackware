@@ -1,3 +1,13 @@
+
+xfce/slack-wallpapers-0.116-noarch-1_microlinux.txz: Added.
+xfce/microlinux-wallpapers-1.0-noarch-1_microlinux.txz: Added.
+xap/mozilla-firefox-l10n-24.1.0-x86_64-1_microlinux.txz: Added.
+xap/mozilla-thunderbird-l10n-24.1.0-x86_64-1_microlinux.txz: Added.
+d/jdk-7u45-x86_64-1_microlinux.txz: Added.
+xap/openoffice-4.0.1_en_US-x86_64-1_microlinux.txz: Added.
+xap/openoffice-langpack-de-4.0.1-x86_64-1_microlinux.txz: Added.
+xap/openoffice-langpack-fr-4.0.1-x86_64-1_microlinux.txz: Added.
++---------------------------+
 Sat Nov  2 14:38:27 CET 2013
 ap/cdlabelgen-4.3.0-noarch-1_microlinux.txz: Added.
 ap/p7zip-9.20.1-x86_64-1_microlinux.txz: Added.
