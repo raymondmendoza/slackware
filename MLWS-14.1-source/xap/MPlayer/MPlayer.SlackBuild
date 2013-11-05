@@ -1,8 +1,12 @@
 #!/bin/sh
 
-# Slackware build script for mozilla-thunderbird-l10n
+# Slackware build script for MPlayer
 
 # Written by Niki Kovacs <info@microlinux.fr)
+# Based on Eric Hameleers' SlackBuild
+#
+# This script builds MPlayer WITHOUT a GUI, since I only use it as a backend
+# for SMPlayer.
 #
 # All rights reserved.
 #
@@ -23,10 +27,12 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-PRGNAM=mozilla-thunderbird-l10n
-VERSION=${VERSION:-24.1.0}	 
+PRGNAM=MPlayer
+VERSION=${VERSION:-1.1.1}	 
 BUILD=${BUILD:-1}
 TAG=${TAG:-_microlinux}		
+
+NUMJOBS=${NUMJOBS:--j5}
 
 # Automatically determine the architecture we're building on:
 if [ -z "$ARCH" ]; then
@@ -37,6 +43,11 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/microlinux}	
+PKG=$TMP/package-$PRGNAM
+OUTPUT=${OUTPUT:-/tmp}	
 
 if [ "$ARCH" = "i486" ]; then
   SLKCFLAGS="-O2 -march=i486 -mtune=i686"
@@ -52,59 +63,70 @@ else
   LIBDIRSUFFIX=""
 fi
 
-CWD=$(pwd)
-TMP=${TMP:-/tmp/microlinux}	
-PKG=$TMP/package-$PRGNAM
-OUTPUT=${OUTPUT:-/tmp}	
+set -e 
 
-URL="https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases"
+if [ ! -r $PRGNAM-$VERSION.tar.xz ] ; then
+   wget -c http://www.mplayerhq.hu/$PRGNAM/releases/$PRGNAM-$VERSION.tar.xz
+fi
 
-# Build translations for the following languages
-TBIRDLANGS="de fr"
-
-set -e # Exit on most errors
-
-for TBIRDLANG in $TBIRDLANGS; do
-
-	# Download tarball
-	if [ ! -r $TBIRDLANG.xpi ] ; then
-					wget -c --no-check-certificate -O ${TBIRDLANG}-$(uname -m).xpi \
-		      ${URL}/${VERSION}/linux-$(uname -m)/xpi/${TBIRDLANG}.xpi
-	fi
-
-	# Check tarball -> these .xpi files seem to be moving targets
-	# md5sum -c $TBIRDLANG-$(uname -m).xpi.md5
-
-done
+md5sum -c $PRGNAM-$VERSION.tar.xz.md5
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.xz 
+cd $PRGNAM-$VERSION 
+chown -R root:root .
+find . \
+ \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+ -exec chmod 755 {} \; -o \
+ \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+ -exec chmod 644 {} \;
 
-for TBIRDLANG in $TBIRDLANGS; do
-	mkdir -p $PRGNAM-$VERSION/$TBIRDLANG
-	unzip $CWD/$TBIRDLANG-$(uname -m).xpi -d $PRGNAM-$VERSION/$TBIRDLANG
-	cd $PRGNAM-$VERSION/$TBIRDLANG
-	chown -R root:root .
-	find . \
-	 \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
-	 -exec chmod 755 {} \; -o \
-	 \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
-	 -exec chmod 644 {} \;
-	mkdir -p $PKG/usr/lib$LIBDIRSUFFIX/thunderbird-$VERSION/extensions/langpack-$TBIRDLANG@thunderbird.mozilla.org
-	cp -a * $PKG/usr/lib$LIBDIRSUFFIX/thunderbird-$VERSION/extensions/langpack-$TBIRDLANG@thunderbird.mozilla.org
-done
+# Determine what X we're running (the modular X returns the prefix
+# in the next command, while older versions stay silent):
+XPREF=$(pkg-config --variable=prefix x11) || true
+[ "$XPREF" == "" ] && XPREF='/usr/X11R6'
 
-mkdir -p $PKG/usr/lib$LIBDIRSUFFIX/thunderbird-$VERSION/defaults/pref
-cp -a $CWD/defaultlocale.js $PKG/usr/lib$LIBDIRSUFFIX/thunderbird-$VERSION/defaults/pref/
+# MPlayer wants to automatically determine compiler flags,
+# so we don't provide CFLAGS:
+./configure \
+  --prefix=/usr \
+  --mandir=/usr/man \
+	--confdir=/etc/mplayer \
+	--disable-gui \
+	--enable-menu \
+  --disable-live \
+	--disable-arts \
+	--disable-bitmap-font \
+	--enable-runtime-cpudetection \
+	--codecsdir=/usr/lib${LIBDIRSUFFIX}/codecs \
+	--language="en de fr" 
+
+# So that MPlayer does not report "UNKNOWN" as it's version:
+echo $VERSION > VERSION
+make $NUMJOBS 
+make DESTDIR=$PKG install
+
+# Configuration file
+cp etc/example.conf $PKG/etc/mplayer/mplayer.conf
+
+find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+
+find $PKG/usr/man -type f -exec gzip -9 {} \;
+for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-
+cp -a \
+  AUTHORS LICENSE README VERSION \
+  $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

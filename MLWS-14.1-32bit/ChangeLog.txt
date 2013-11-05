@@ -1,3 +1,19 @@
+
+kde/microlinux-wallpapers-1.0-noarch-1_microlinux.txz: Added.
+xap/mozilla-firefox-l10n-24.1.0-i486-1_microlinux.txz: Upgraded.
+xap/mozilla-thunderbird-l10n-24.1.0-i486-1_microlinux.txz: Upgraded.
+ap/dirac-1.0.2-i486-1_microlinux.txz: Added.
+l/live555-2011.12.23-i486-1_microlinux.txz: Added.
+l/libdv-1.0.0-i486-1_microlinux.txz: Added.
+ap/faad2-2.7-i486-1_microlinux.txz: Added.
+l/libcuefile-r475-i486-1_microlinux.txz: Added.
+l/libreplaygain-r475-i486-1_microlinux.txz: Added.
+ap/musepack-tools-r435-i486-1_microlinux.txz: Added.
+l/libdca-0.0.5-i486-1_microlinux.txz: Added.
+l/a52dec-0.7.4-i486-1_microlinux.txz: Added.
+ap/twolame-0.3.13-i486-1_microlinux.txz: Added.
+xap/MPlayer-1.1.1-i486-1_microlinux.txz: Rebuilt.
++---------------------------+
 Sat Nov  2 11:09:07 CET 2013
 ap/cdlabelgen-4.3.0-noarch-1_microlinux.txz: Added.
 ap/p7zip-9.20.1-i486-1_microlinux.txz: Added.
