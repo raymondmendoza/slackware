@@ -1,3 +1,19 @@
+Tue Nov  5 07:52:05 CET 2013
+kde/microlinux-wallpapers-1.0-noarch-1_microlinux.txz: Added.
+xap/mozilla-firefox-l10n-24.1.0-x86_64-1_microlinux.txz: Upgraded.
+xap/mozilla-thunderbird-l10n-24.1.0-x86_64-1_microlinux.txz: Upgraded.
+ap/dirac-1.0.2-x86_64-1_microlinux.txz: Added.
+l/live555-2011.12.23-x86_64-1_microlinux.txz: Added.
+l/libdv-1.0.0-x86_64-1_microlinux.txz: Added.
+ap/faad2-2.7-x86_64-1_microlinux.txz: Added.
+l/libcuefile-r475-x86_64-1_microlinux.txz: Added.
+l/libreplaygain-r475-x86_64-1_microlinux.txz: Added.
+ap/musepack-tools-r435-x86_64-1_microlinux.txz: Added.
+l/libdca-0.0.5-x86_64-1_microlinux.txz: Added.
+l/a52dec-0.7.4-x86_64-1_microlinux.txz: Added.
+ap/twolame-0.3.13-x86_64-1_microlinux.txz: Added.
+xap/MPlayer-1.1.1-x86_64-1_microlinux.txz: Rebuilt.
++---------------------------+
 Sat Nov  2 11:09:07 CET 2013
 ap/cdlabelgen-4.3.0-noarch-1_microlinux.txz: Added.
 ap/p7zip-9.20.1-x86_64-1_microlinux.txz: Added.
